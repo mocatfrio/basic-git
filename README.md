@@ -17,9 +17,11 @@
   ```
 * Perhatikan ilustrasi di bawah ini:
   * Tanpa Git
+  
   ![img1](img/revisi-tanpa-git.png)
 
   * Dengan Git
+  
   ![img2](img/database-git.png)
 
 * Kelebihan Git lainnya adalah sebagai pengatur proyek yang dikerjakan oleh beberapa orang, dimana orang-orang tersebut mengerjakan sebuah kode secara bersamaan

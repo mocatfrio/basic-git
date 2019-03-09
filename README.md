@@ -50,7 +50,7 @@ git --version
     git config --global user.name "<username>"
     git config --global user.email "<email@example.com>"
     ```
-    p.s. Ubah <username> dan <email> sesuai akun Github yang sudah dibuat
+    p.s. Ubah \<username\> dan \<email\> sesuai akun Github yang sudah dibuat
 5. Buka repository yang telah kamu buat tadi di Github, kemudian copy link untuk melakukan clone
    
    ![img5](img/ss1.png)

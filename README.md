@@ -99,7 +99,7 @@ git --version
     ```
     p.s. `-A` artinya tambahkan semua file yang berubah, sehingga file yang tidak berubah, tidak akan ditambahkan
 
-    Setelah melakukan **Add**, coba cek kembali status git. Maka akan keluar seperti ini:
+    Setelah melakukan add, coba cek kembali status git. Maka akan keluar seperti ini:
     ```bash
     $ git status
     On branch master
@@ -122,8 +122,59 @@ git --version
     ```bash
     git commit -m "<masukkan pesan yang berfaedah yha>"
     ```
+    p.s.
+    * `-m` digunakan untuk memasukkan pesan commit. Usahakan pesannya jelas dan mudah dipahami, supaya bisa digunakan untuk mencari suatu perubahan
+    * Contoh pesan yang baik
+        ```bash
+        git commit -m "mengubah fungsi baca file"
+        git commit -m "menghapus fitur md5"
+        git commit -m "menambah fitur hapus file setelah 5 detik"
+        ```
+    * Contoh pesan yang buruk
+        ```bash
+        git commit -m "duh capeq sekali yha"
+        git commit -m "uhuy selesai tugasku"
+        git commit -m "revisi"
+        git commit -m "revisi terakhir bgt"
+        ```
+    
+    Setelah di commit, maka akan keluar pesan seperti ini:
+    ```bash
+    [master b0b9dc8] uhuy
+    10 files changed, 144 insertions(+), 2 deletions(-)
+    rewrite README.md (100%)
+    create mode 100644 img/1.png
+    create mode 100644 img/database-git.png
+    create mode 100644 img/git-logo.png
+    create mode 100644 img/gitkraken.gif
+    create mode 100644 img/revisi-tanpa-git.png
+    create mode 100644 img/ss1.png
+    create mode 100644 img/ss2.png
+    create mode 100644 img/ss3.png
+    create mode 100644 img/ss4.png
+    ```
+11. Terakhir, melakukan **Push**. Mudahnya, push ini untuk mengunggah file yang telah dimodifikasi di repository lokal (PC)
+    ```bash
+    git push
+    ```
+    Kamu akan diminta memasukkan username dan password akun Github. Jika berhasil, maka akan mengeluarkan output seperti ini:
+    ```bash
+    Counting objects: 13, done.
+    Delta compression using up to 4 threads.
+    Compressing objects: 100% (13/13), done.
+    Writing objects: 100% (13/13), 2.55 MiB | 34.00 KiB/s, done.
+    Total 13 (delta 0), reused 0 (delta 0)
+    To https://github.com/mocatfrio/basic-git.git
+      862a012..b0b9dc8  master -> master
+    ```
+11. Ada suatu ketika, teman kamu mengedit source code yang juga sedang kamu kerjakan. Maka kamu harus melakukan **Pull** untuk menyamakan source code yang sudah diedit temanmu dengan source code di PCmu. Mudahnya, pull ini untuk mengunduh file.
+    ```bash
+    git pull
+    ```
 
-11. 
+
+![img9](img/pushpull.jpg)
+
 ## Tips
 1. Untuk kamu yang tidak terbiasa dengan terminal, ada banyak sekali aplikasi Git Client yang tersedia, fitur yang ditawarkan pun beragam. Berikut ini salah satu contoh aplikasi Git Client berbasis GUI yang paling sering digunakan:
 

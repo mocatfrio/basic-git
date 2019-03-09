@@ -25,11 +25,6 @@
 * Kelebihan Git lainnya adalah sebagai pengatur proyek yang dikerjakan oleh beberapa orang, dimana orang-orang tersebut mengerjakan sebuah kode secara bersamaan
 * **Github** adalah sebuah situs sharing code yang menggunakan **Git** sebagai SCM-nya. 
 
-## Beberapa Istilah Penting dalam Git
-1. Repository
-2. Clone
-3. 
-
 ## Instalasi
 Jika kamu menggunakan Linux berbasis Debian/Ubuntu, lakukan ini:
 ```bash
@@ -167,13 +162,62 @@ git --version
     To https://github.com/mocatfrio/basic-git.git
       862a012..b0b9dc8  master -> master
     ```
-11. Ada suatu ketika, teman kamu mengedit source code yang juga sedang kamu kerjakan. Maka kamu harus melakukan **Pull** untuk menyamakan source code yang sudah diedit temanmu dengan source code di PCmu. Mudahnya, pull ini untuk mengunduh file.
+12. Suatu ketika, temanmu mengedit source code yang juga sedang kamu kerjakan. Maka kamu harus melakukan **Pull** untuk menyamakan source code yang sudah diedit temanmu dengan source code di PCmu. Mudahnya, pull ini untuk mengunduh file.
     ```bash
     git pull
     ```
-
+    Jika proses pull berhasil, maka akan keluar output seperti ini:
+    ```bash
+    remote: Enumerating objects: 4, done.
+    remote: Counting objects: 100% (4/4), done.
+    remote: Compressing objects: 100% (2/2), done.
+    remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+    Unpacking objects: 100% (3/3), done.
+    From https://github.com/mocatfrio/basic-git
+      04c0831..7cdc6af  master     -> origin/master
+    Updating 04c0831..7cdc6af
+    Fast-forward
+    tes | 1 +
+    1 file changed, 1 insertion(+)
+    create mode 100644 tes
+    ```
 
 ![img9](img/pushpull.jpg)
+
+Ada suatu ketika, kita sudah memiliki proyek lama di PC. Kemudian, kita ingin meletakkan proyek tersebut ke Github. Maka, kita tinggal melakukan **Init** dan **Remote**. 
+Caranya:
+1. Pindah ke folder tempatmu meletakkan proyekmu di PC
+    ```bash
+    cd proyek-besar
+    ```
+2. Lakukan inisialisasi Git menggunakan **Init**. Init dilakukan untuk membuat repository Git lokal.
+    ```bash
+    git init
+    ```
+    ```bash
+    Initialized empty Git repository in /home/mocatfrio/Documents/proyek-besar/.git/
+    ```
+3. Buatlah repository baru pada Github. Disarankan jangan mencentang **Initialize this repository with a README**.
+4. Kembali ke terminal, lakukan **Remote** pada folder untuk menghubungkan repo lokal dan repo Githubmu
+    ```bash
+    git remote add origin https://github.com/mocatfrio/basic-git.git
+    ```
+5. Setelah mengkoneksikan repo lokal dan repo Github, kamu tinggal melakukan langkah-langkah yang sama seperti di atas, yaitu:
+   ```bash
+   git add -A
+   git commit -m "<pesan berfaedah>"
+   git push 
+   #atau 
+   git push -u origin master
+   ```
+
+Beberapa command di atas adalah command dasar Git yang wajib kamu ketahui. Namun, di dunia kerja nanti akan ada banyak command-command yang lebih dibutuhkan seperti **Branch**, **Merge**, **Checkout** dll.
+
+![img10](img/ss5.png)
+
+Ilustrasi dari gambar di atas: Ada 2 developer yang sedang membuat sebuah web, bernama Daus dan Hafara. Masing-masing membuat **Branch** sebagai tempat bekerja untuk membuat fitur masing-masing. Kenapa membuat branch? Supaya mereka berdua tidak bertabrakan ketika push dan pull source code. Setelah Hafara selesai bekerja, Daus melakukan **Merge** untuk menggabungkan pekerjaan Hafara dengan pekerjaannya. 
+
+Jika kamu ingin belajar Git dengan cara menyenangkan, bisa mengunjungi https://git-school.github.io/visualizing-git/
 
 ## Tips
 1. Untuk kamu yang tidak terbiasa dengan terminal, ada banyak sekali aplikasi Git Client yang tersedia, fitur yang ditawarkan pun beragam. Berikut ini salah satu contoh aplikasi Git Client berbasis GUI yang paling sering digunakan:
@@ -193,3 +237,5 @@ git --version
 
 
 ## Referensi
+* https://git-scm.com/book/id/v1/Dasar-dasar-Git
+* https://git-school.github.io/visualizing-git/

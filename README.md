@@ -196,6 +196,7 @@ Caranya:
     ```bash
     git init
     ```
+    Output:
     ```bash
     Initialized empty Git repository in /home/mocatfrio/Documents/proyek-besar/.git/
     ```
